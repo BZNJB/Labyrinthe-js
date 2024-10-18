@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte avec Points</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Carte en arrière-plan */
+        .carte {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('Map.jpg'); /* Utilise l'image que tu as fournie */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Point commun pour tous */
+        .point {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        /* Point 1 avec flèche rouge */
+        .point1 {
+            width: 40px; /* Correspond à la taille d'une case */
+            height: 40px;
+            top: 62%; /* Positionnement basé sur la nouvelle image */
+            left: 80%;
+            background-image: url('entre.png');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }
+
+        /* Point 2 avec flèche noire (déplacé là où pointe la flèche verte) */
+        .point2 {
+            width: 60px; /* Correspond à la taille d'une case */
+            height: 60px;
+            top: 77%;
+            left: 67%;
+            background-image: url('panneau.png');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+           
+        }
+        
+
+        /* Point 3 avec flèche verte */
+        .point3 {
+            width: 40px; /* Correspond à la taille d'une case */
+            height: 40px;
+            top: 87%; /* Nouveau positionnement basé sur la flèche verte */
+            left: 77%;
+            background-image: url('sortie-removebg-preview.png');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+        }
+
+        /* Personnage */
+        .personnage {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url('Gollum-removebg-preview.png'); /* Remplace par l'image du personnage */
+            background-size: cover;
+            background-position: center;
+            top: 62%; /* Initialisé au premier point */
+            left: 80%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="carte">
+        <!-- Points -->
+        <div class="point point1"></div>
+        <div class="point point2"></div>
+        <div class="point point3"></div>
+
+        <!-- Personnage -->
+        <div class="personnage"></div>
+    </div>
+
+    <script src="map.js"></script> <!-- Fichier JavaScript pour les déplacements -->
+</body>
+</html>

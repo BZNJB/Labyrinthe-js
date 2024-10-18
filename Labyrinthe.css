@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* S'assure que la hauteur minimale du body couvre toute la fenêtre */
+    margin: 0;
+    background-image: url('Grottes5.png'); /* Image de fond */
+    background-size: cover; /* L'image couvre tout l'écran */
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+    background-position: center; /* Centrer l'image de fond */
+    background-attachment: fixed; /* L'image reste fixe au défilement */
+}
+
+
+#labyrinthe {
+    display: grid;
+    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(20, 25px);
+    gap: 2px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.case {
+    width: 27px;
+    height: 27px;
+    background-image: url('sol.jpg');
+    border: 0pxx solid #392106;
+    background-size: cover;
+}
+
+.mur {
+    background-image: url('wall2.png'); /* Lien vers l'image */}
+
+.personnage {
+    width: 25px; /* Correspond à la taille d'une case */
+    height: 25px;
+    position: absolute;
+    background-image: url('Gollum-removebg-preview.png'); /* Lien vers l'image */
+    background-size: cover; /* Pour ajuster la taille de l'image au div */
+    background-position: center;
+}
+
+
+.trace {
+    background-color: yellow;
+}
+
+.point {
+    width: 25px;
+    height: 25px;
+    background-image: url('Anneau-removebg-preview.png'); /* Lien vers l'image */
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Stylisation du point d'entrée */
+.entree {
+    width: 27px; /* Correspond à la taille d'une case */
+    height: 27px;
+    background-image: url('entre.png'); /* URL de l'image de l'entrée */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
+/* Stylisation du point de sortie */
+.sortie {
+    width: 27px; /* Correspond à la taille d'une case */
+    height: 27px;
+    background-image: url('sortie-removebg-preview.png'); /* URL de l'image de la sortie */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+
